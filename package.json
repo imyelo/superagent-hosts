@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/imyelo/superagent-hosts",
   "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0",
     "superagent": "^0.21.0"
   }
 }
