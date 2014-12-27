@@ -4,7 +4,12 @@ function parser (hosts) {
   var parsed = [];
   hosts = (hosts || '').split('\n');
   hosts.forEach(function (line) {
-    var match = line.match(/([^\s]*)(?:\s*)([^\s]*)/);
+    var match;
+    line = line.trim();
+    if (line[0] === '#') {
+      return;
+    }
+    match = line.match(/([^\s]*)(?:\s*)([^\s]*)/);
     if (match && match.length === 3) {
       parsed.push({
         domain: match[1],
