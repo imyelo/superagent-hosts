@@ -31,7 +31,7 @@ module.exports = function (hosts) {
     var cname = match(hosts, uri.hostname);
 
     if (cname !== uri.hostname) {
-      request.url = uri.protocol + '//' + cname + ':' + (uri.port || '80') + uri.path + uri.hash;
+      request.url = uri.protocol + '//' + cname + ':' + (uri.port || '80') + (uri.path || '') + (uri.hash || '');
       request.set('Host', uri.hostname);
     }
 
