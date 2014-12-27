@@ -32,4 +32,18 @@ describe('url', function () {
     expect(request.url).to.be.equal('https://192.168.10.12:8080/path/to?search=foobar#hash');
     expect(request.headers).to.be.deep.equal({Host: 'match.com'});
   });
+  it('http://space-match.com', function () {
+    var request = new Request('http://space-match.com');
+    var config = load('hosts');
+    request = hosts(config)(request);
+    expect(request.url).to.be.equal('http://192.168.10.12:80/');
+    expect(request.headers).to.be.deep.equal({Host: 'space-match.com'});
+  });
+  it('http://comment.com', function () {
+    var request = new Request('http://comment.com');
+    var config = load('hosts');
+    request = hosts(config)(request);
+    expect(request.url).to.be.equal('http://comment.com');
+    expect(request.headers).to.be.deep.equal({});
+  });
 });
