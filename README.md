@@ -7,7 +7,7 @@ extra hosts file for nodejs superagent requests
 ## Example
 ./hosts
 ```
-foobar.com 192.168.10.12
+192.168.10.12 foobar.com
 ```
 
 ./app.js
