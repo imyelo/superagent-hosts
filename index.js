@@ -1,5 +1,5 @@
 var url = require('url');
-var Hosts = require('hosts-parser');
+var Hosts = require('hosts-parser').Hosts;
 
 module.exports = function (hosts) {
   hosts = new Hosts(hosts);

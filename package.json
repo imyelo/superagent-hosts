@@ -30,6 +30,6 @@
     "superagent": "^0.21.0"
   },
   "dependencies": {
-    "hosts-parser": "^0.2.0"
+    "hosts-parser": "^0.3.0"
   }
 }
