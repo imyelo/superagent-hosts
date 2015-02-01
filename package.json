@@ -28,5 +28,8 @@
     "chai": "^1.10.0",
     "mocha": "^2.1.0",
     "superagent": "^0.21.0"
+  },
+  "dependencies": {
+    "hosts-parser": "^0.2.0"
   }
 }
